@@ -117,7 +117,7 @@ const handleSave = async (id: number) => {
                 <th className="py-3 px-4 border border-gray-700">Description</th>
                 <th className="py-3 px-4 border border-gray-700">File Type</th>
                 <th className="py-3 px-4 border border-gray-700">Link</th>
-                <th className="py-3 px-4 border border-gray-700">Actions</th>
+                <th className="py-3 px-4 border border-gray-700">Action</th>
               </tr>
             </thead>
             <tbody className="bg-gray-700 text-white">
