@@ -32,7 +32,7 @@ const DownloadIcon = FaFileDownload as React.ComponentType;
 
   const fetchFiles = () => {
     setLoading(true);
-    fetch("https://file-node.vercel.app/files")
+    fetch("https://file-node-ejd7.onrender.com/files")
       .then((res) => res.json())
       .then((data) => {
         setFiles(data);
@@ -51,7 +51,7 @@ const DownloadIcon = FaFileDownload as React.ComponentType;
   const handleDelete = async (id: number) => {
   if (!window.confirm("Are you sure you want to delete this file?")) return;
   try {
-    const res = await fetch(`https://file-node.vercel.app/files/${id}`, {
+    const res = await fetch(`https://file-node-ejd7.onrender.com/files/${id}`, {
       method: "DELETE",
     });
     const data = await res.json();
@@ -73,7 +73,7 @@ const handleSave = async (id: number) => {
   if (!editFilename.trim()) return alert("Filename cannot be empty");
 
   try {
-    const res = await fetch(`https://file-node.vercel.app/files/${id}`, {
+    const res = await fetch(`https://file-node-ejd7.onrender.com/files/${id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ filename: editFilename, description: editDescription }),
@@ -151,7 +151,7 @@ const handleSave = async (id: number) => {
                   <td className="py-2 px-4 border border-gray-600">{file.filetype}</td>
                   <td className="py-2 px-4 border border-gray-600">
                     <a
-                      href={`https://file-node.vercel.app${file.filepath}`}
+                      href={`https://file-node-ejd7.onrender.com${file.filepath}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-blue-400 underline hover:text-blue-200"
@@ -190,7 +190,7 @@ const handleSave = async (id: number) => {
                         <DeleteIcon />
                         </button>
                         <a
-                           href={`https://file-node.vercel.app/files/${file.id}/download`}
+                           href={`https://file-node-ejd7.onrender.com/files/${file.id}/download`}
                           download
                           className="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded-full shadow-md transition"
                         >

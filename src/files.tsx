@@ -50,7 +50,7 @@ export default function FileUpload() {
     formData.append("descriptions", JSON.stringify(selectedFiles.map(f => f.description)));
 
     try {
-      const res = await fetch("https://file-node.vercel.app/uploads/files", {
+      const res = await fetch("https://file-node-ejd7.onrender.com/uploads/files", {
         method: "POST",
         body: formData,
       });
