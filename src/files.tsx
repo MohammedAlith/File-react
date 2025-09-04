@@ -71,7 +71,7 @@ export default function FileUpload() {
       const res = await fetch("https://file-node.vercel.app/files");
       const data = await res.json();
       console.log("Fetched files:", data);
-      navigate("/uploadedFiles", { state: data });
+      navigate("/uploadedfiles", { state: data });
     } catch (err) {
       console.error("Error fetching files:", err);
     }
