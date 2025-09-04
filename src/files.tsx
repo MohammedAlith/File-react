@@ -36,7 +36,7 @@ export default function FileUpload() {
 
   const allDescriptionsFilled = selectedFiles.every(f => f.description.trim() !== "");
 
-  // ✅ Upload
+  //  Upload
   const handleUpload = async () => {
     if (!allDescriptionsFilled || selectedFiles.length === 0) {
       setMessage("Please fill all descriptions before uploading.");
@@ -65,13 +65,13 @@ export default function FileUpload() {
     }
   };
 
-  // ✅ Always fetch from backend
+  //  Always fetch from backend
   const handleViewFiles = async () => {
     try {
       const res = await fetch("https://file-node.vercel.app/files");
       const data = await res.json();
       console.log("Fetched files:", data);
-      navigate("/uploaded-files", { state: data });
+      navigate("/uploadedFiles", { state: data });
     } catch (err) {
       console.error("Error fetching files:", err);
     }
