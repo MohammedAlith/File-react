@@ -116,7 +116,7 @@ const handleSave = async (id: number) => {
                 <th className="py-3 px-4 border border-gray-700">Filename</th>
                 <th className="py-3 px-4 border border-gray-700">Description</th>
                 <th className="py-3 px-4 border border-gray-700">File Type</th>
-                <th className="py-3 px-4 border border-gray-700">Link</th>
+                
                 <th className="py-3 px-4 border border-gray-700">Action</th>
               </tr>
             </thead>
@@ -149,16 +149,7 @@ const handleSave = async (id: number) => {
                     )}
                   </td>
                   <td className="py-2 px-4 border border-gray-600">{file.filetype}</td>
-                  <td className="py-2 px-4 border border-gray-600">
-                    <a
-                      href={`https://file-node-ejd7.onrender.com${file.filepath}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-blue-400 underline hover:text-blue-200"
-                    >
-                      View
-                    </a>
-                  </td>
+                 
                   <td className="py-2 px-4 border border-gray-600 flex justify-center gap-4">
                     {editingId === file.id ? (
                       <>
